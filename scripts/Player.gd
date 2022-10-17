@@ -5,6 +5,3 @@ func _physics_process(delta):
 
 func _on_Player_body_entered(body):
 	get_tree().change_scene("res://scenes/Jumpscare.tscn")
-
-func _on_Goal_area_entered(area):
-	print("yeah boi")

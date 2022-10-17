@@ -1,7 +1,7 @@
 extends Control
 
 func _on_StartButton_pressed():
-	get_tree().change_scene("res://scenes/Game.tscn")
+	get_tree().change_scene("res://scenes/levels/Level1.tscn")
 
 #Active/Désactive le plein écran
 func _on_FullScreenButton_pressed():
