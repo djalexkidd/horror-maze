@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/boo.wav" type="AudioStream" id=1]
+[ext_resource path="res://assets/jumpscare.png" type="Texture" id=2]
+[ext_resource path="res://assets/amstrad_cpc464.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://scripts/GameOver.gd" type="Script" id=4]
+[ext_resource path="res://assets/gameover.mp3" type="AudioStream" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 128
+font_data = ExtResource( 3 )
+
+[node name="Jumpscare" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Julien" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 2 )
+
+[node name="Boo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = 4.0
+autoplay = true
+
+[node name="GameOver" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+
+[node name="GameOverBG" type="ColorRect" parent="GameOver"]
+modulate = Color( 1, 1, 1, 0.313726 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="GameOver"]
+anchor_right = 1.0
+margin_top = 48.0
+margin_bottom = 176.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER"
+align = 1
+
+[node name="Out" type="AudioStreamPlayer" parent="GameOver"]
+stream = ExtResource( 5 )
+volume_db = 2.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="finished" from="Boo" to="GameOver" method="_on_Boo_finished"]
+[connection signal="timeout" from="Timer" to="GameOver" method="_on_Timer_timeout"]
