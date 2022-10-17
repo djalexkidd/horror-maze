@@ -47,7 +47,7 @@ margin_right = 272.0
 margin_bottom = -16.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "djalexkidd - 2022"
+text = "2022 - djalexkidd"
 align = 1
 
 [node name="StartButton" type="Button" parent="."]
