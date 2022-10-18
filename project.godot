@@ -12,6 +12,9 @@ config_version=4
 
 config/name="Maze of Lepers"
 run/main_scene="res://scenes/Menu.tscn"
+boot_splash/image="res://assets/splash.png"
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0.415686, 1 )
 config/icon="res://icon.png"
 
 [display]
