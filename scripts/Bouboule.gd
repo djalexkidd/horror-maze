@@ -11,6 +11,8 @@ func _physics_process(delta):
 	
 	velocity = move_and_slide(velocity,Vector2.UP)
 	
-	if is_on_floor() or is_on_ceiling() or is_on_wall():
+	if is_on_floor() or is_on_ceiling():
 		directiony = directiony * -1
+
+	if is_on_wall():
 		directionx = directionx * -1
