@@ -5,6 +5,7 @@ func _ready():
 	$BestValue.text = str("%0.3f" % Global.personnal_best)
 	if Global.time < Global.personnal_best:
 		Global.personnal_best = Global.time
+		$NewRecord.show()
 		save_time()
 
 func save_time():
