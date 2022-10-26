@@ -17,3 +17,6 @@ func save_time():
 	save_file.open("user://pb.json", File.WRITE)
 	save_file.store_line(to_json(data))
 	save_file.close()
+
+func _on_RestartButton_pressed():
+	get_tree().change_scene("res://scenes/Menu.tscn")
