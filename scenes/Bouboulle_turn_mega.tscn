@@ -1,0 +1,373 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "turn"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 180.0 ]
+}
+
+[sub_resource type="SphereMesh" id=1]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 16.0
+
+[node name="BouboulleTurnMega" type="Area2D"]
+collision_layer = 8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "turn"
+anims/RESET = SubResource( 3 )
+anims/turn = SubResource( 4 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 0, -128 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -128 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181227, -64 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181227, -64 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D6" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181236, -192 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181236, -192 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D8" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181236, -320 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181236, -320 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D9" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181236, 64 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181236, 64 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D12" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181236, 192 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181236, 192 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D13" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181236, 320 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181236, 320 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D15" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -128.018, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="."]
+position = Vector2( -128.018, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D18" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -256.018, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="."]
+position = Vector2( -256.018, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D20" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -384.018, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="."]
+position = Vector2( -384.018, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D22" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 127.982, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="."]
+position = Vector2( 127.982, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D24" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 255.982, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="."]
+position = Vector2( 255.982, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D25" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 383.982, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="."]
+position = Vector2( 383.982, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 0, -256 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -256 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D7" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181227, -384 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181227, -384 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D26" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181227, -448 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D26" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181227, -448 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D28" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181236, 448 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D28" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181236, 448 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D30" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 511.982, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D30" type="CollisionShape2D" parent="."]
+position = Vector2( 511.982, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D33" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181274, 512 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D33" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181274, 512 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D34" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181227, -512 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D34" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181227, -512 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D31" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -512.018, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D31" type="CollisionShape2D" parent="."]
+position = Vector2( -512.018, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D32" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -0.0181236, 384 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D32" type="CollisionShape2D" parent="."]
+position = Vector2( -0.0181236, 384 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D10" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 0, 256 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 256 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D11" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 0, 128 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 128 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D14" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 64, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="."]
+position = Vector2( 64, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D16" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 192, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="."]
+position = Vector2( 192, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D17" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -64, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="."]
+position = Vector2( -64, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D19" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -192, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="."]
+position = Vector2( -192, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D21" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 319.982, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="."]
+position = Vector2( 319.982, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D23" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( 447.982, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="."]
+position = Vector2( 447.982, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D27" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -448.018, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D27" type="CollisionShape2D" parent="."]
+position = Vector2( -448.018, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance2D29" type="MeshInstance2D" parent="."]
+modulate = Color( 0, 0.0156863, 1, 1 )
+position = Vector2( -320.018, 0 )
+scale = Vector2( 16, 16 )
+mesh = SubResource( 1 )
+
+[node name="CollisionShape2D29" type="CollisionShape2D" parent="."]
+position = Vector2( -320.018, 0 )
+shape = SubResource( 2 )
