@@ -19,4 +19,5 @@ func save_time():
 	save_file.close()
 
 func _on_RestartButton_pressed():
+	Global.reset_time()
 	get_tree().change_scene("res://scenes/Menu.tscn")
