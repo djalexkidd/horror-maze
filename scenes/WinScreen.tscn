@@ -43,7 +43,7 @@ margin_bottom = 33.5
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "You just escaped the maze of Lepers,
-you fucking did it bitch !"
+you frickin did it man !"
 align = 1
 
 [node name="TimeElapsed" type="Label" parent="."]
